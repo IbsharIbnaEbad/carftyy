@@ -39,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         FocusScope.of(context).unfocus();
       },
       child: Scaffold(
@@ -79,14 +79,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       TextInputType.emailAddress,
                     ),
                     const SizedBox(height: 14),
-                    AppThemeData.textFormField('Password', 1, _passwordTEController,
-                        (value) {
+                    AppThemeData.textFormField(
+                        'Password', 1, _passwordTEController, (value) {
                       if (value == null || value.isEmpty) {
                         return 'Please enter your password';
                       }
                       return null;
-                    },
-                        TextInputType.text),
+                    }, TextInputType.text),
                     const SizedBox(height: 23),
                     GetBuilder<LogInController>(
                       builder: (controller) {
@@ -94,22 +93,24 @@ class _LoginScreenState extends State<LoginScreen> {
                           return const CenterCircularProgressIndicator();
                         } else {
                           return AppThemeData.nextButton(
-                              onPressed: _moveToNextScreen,
+                            onPressed: _moveToNextScreen,
                           );
                         }
                       },
                     ),
-
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        TextButton(onPressed: () {}, child: const Text('Forgotten Password')),
-                        TextButton(onPressed: (){
-                          _onTapSignupButton(context);
-                        }, child: const Text('Sign Up')),
+                        TextButton(
+                            onPressed: () {},
+                            child: const Text('Forgotten Password')),
+                        TextButton(
+                            onPressed: () {
+                              _onTapSignupButton(context);
+                            },
+                            child: const Text('Sign Up')),
                       ],
                     ),
-
                   ],
                 ),
               ),
@@ -130,7 +131,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Navigator.pushAndRemoveUntil(
             context,
             MaterialPageRoute(builder: (context) => const MainBottomNavBar()),
-                (p) => false,
+            (p) => false,
           );
         }
       } else {
@@ -142,6 +143,7 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 }
-void _onTapSignupButton(BuildContext context){
+
+void _onTapSignupButton(BuildContext context) {
   Navigator.pushNamed(context, RegisterScreen.name);
 }
