@@ -85,7 +85,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         return 'Please enter your password';
                       }
                       return null;
-                    }, TextInputType.text),
+                    },
+                        TextInputType.text),
                     const SizedBox(height: 23),
                     GetBuilder<LogInController>(
                       builder: (controller) {
@@ -98,6 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         }
                       },
                     ),
+
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
