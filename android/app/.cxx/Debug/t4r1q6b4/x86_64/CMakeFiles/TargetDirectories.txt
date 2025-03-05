@@ -1,0 +1,2 @@
+C:/Users/Qbits/StudioProjects/carftyy/android/app/.cxx/Debug/t4r1q6b4/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/Qbits/StudioProjects/carftyy/android/app/.cxx/Debug/t4r1q6b4/x86_64/CMakeFiles/rebuild_cache.dir

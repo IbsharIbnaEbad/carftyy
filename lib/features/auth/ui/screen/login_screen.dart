@@ -55,13 +55,13 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(height: 120),
                     SvgPicture.asset(
                       AssetsPath.logo,
-                      width: 80,
+                      width: 100,
                       height: 120,
                     ),
                     const SizedBox(height: 21),
                     AppThemeData.primaryText('Welcome Back'),
                     const SizedBox(height: 16),
-                    AppThemeData.secondaryText('Please Enter Your Email Address'),
+                    AppThemeData.secondaryText(' Enter Your Email Address'),
                     const SizedBox(height: 26),
                     AppThemeData.textFormField(
                       'Email',
@@ -98,11 +98,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         }
                       },
                     ),
-                    Row(
+                    Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         TextButton(onPressed: () {}, child: const Text('Forgotten Password')),
-                        const Text(" | "),
                         TextButton(onPressed: (){
                           _onTapSignupButton(context);
                         }, child: const Text('Sign Up')),
